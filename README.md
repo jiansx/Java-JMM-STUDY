@@ -1,10 +1,14 @@
 # Java-JMM-STUDY
+
 hashtable
+
 一、继承关系
+
 public class Hashtable<K,V>
     extends Dictionary<K,V>
     implements Map<K,V>, Cloneable, java.io.Serializable {
 }
+
 继承Dictionary，实现Cloneable、Serializable
 Dictionary是抽象类，是声明了操作"键值对"函数接口的抽象类
 Enumeration（枚举）接口的作用和Iterator类似，只提供了遍历Vector和HashTable类型集合元素的功能，不支持元素的移除操作。
