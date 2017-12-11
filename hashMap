@@ -1,0 +1,30 @@
+一、包、继承关系
+
+package java.util;
+public class HashMap<K,V> extends AbstractMap<K,V>
+    implements Map<K,V>, Cloneable, Serializable {}
+
+
+二、构造器
+
+    
+    
+三、成员属性
+
+    
+    
+四、put、get方法
+
+  
+    
+    hashCode:在 Java 中，Object 对象的 hashCode() 方法会根据不同的对象生成不同的哈希值，默认情况下为了确保这个哈希值的唯一性，
+    是通过将该对象的内部地址转换成一个整数来实现的。
+    HashCode 其实只是在需要用到哈希算法的数据结构中才有用，比如在 HashMap 和 Hashtable中。
+    HashCode 的用途是为了方便快速地查找对象，当你重写了 hashCode() 后，HashCode 就不再是默认的对象内部地址了，而是你自己定义的一个值。
+    
+    static final int hash(Object key) {
+        int h;
+        return (key == null) ? 0 : (h = key.hashCode()) ^ (h >>> 16);
+    }
+    
+    indexFor
