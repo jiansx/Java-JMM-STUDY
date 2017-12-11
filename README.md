@@ -4,6 +4,7 @@ hashtable
 public class Hashtable<K,V>
     extends Dictionary<K,V>
     implements Map<K,V>, Cloneable, java.io.Serializable {
+}
 继承Dictionary，实现Cloneable、Serializable
 Dictionary是抽象类，是声明了操作"键值对"函数接口的抽象类
 Enumeration（枚举）接口的作用和Iterator类似，只提供了遍历Vector和HashTable类型集合元素的功能，不支持元素的移除操作。
@@ -29,11 +30,17 @@ Enumeration（枚举）接口的作用和Iterator类似，只提供了遍历Vect
         this(initialCapacity, 0.75f);
     }
     
+    public Hashtable() {
+        this(11, 0.75f);
+    }
+
     public Hashtable(Map<? extends K, ? extends V> t) {
         this(Math.max(2*t.size(), 11), 0.75f);
         putAll(t);
     }
+
 3、成员变量
+
     /**
      * 一个单向链表,哈希表的"key-value键值对"都是存储在这个数组中
      */
